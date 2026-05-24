@@ -26,7 +26,7 @@ stages:
   model_building:
     cmd: python src/model_building.py
     deps:
-    - data/processed  
+    - data/processed
     - src/model_building.py
     params:
     - model_building.n_estimators
@@ -41,10 +41,10 @@ stages:
     metrics:
     - reports/metrics.json
 
-# params:
-# - dvclive/params.yaml
-# metrics:
-# - dvclive/metrics.json
-# plots:
-# - dvclive/plots/metrics:
-#     x: step
+params:
+- dvclive/params.yaml
+metrics:
+- dvclive/metrics.json
+plots:
+- dvclive/plots/metrics:
+    x: step
